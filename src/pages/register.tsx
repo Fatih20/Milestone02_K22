@@ -68,7 +68,7 @@ export default function Register() {
               />
             </InputContainer>
             <InputContainer>
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email" style={{color:'white'}}>Email</label>
               <input
                 id="email"
                 value={email}
