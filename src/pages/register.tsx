@@ -60,7 +60,7 @@ export default function Register() {
         <FormContainer>
           <FormStyled onSubmit={(e) => handleRegister(e)}>
             <InputContainer>
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username" style={{color:'white'}}>Username</label>
               <input
                 id="username"
                 value={username}
@@ -76,7 +76,7 @@ export default function Register() {
               />
             </InputContainer>
             <InputContainer>
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password" style={{color:'white'}}>Password</label>
               <input
                 id="password"
                 value={password}
@@ -84,7 +84,7 @@ export default function Register() {
               />
             </InputContainer>
             <InputContainer>
-              <label htmlFor="checkerPassword">Repeat Password</label>
+              <label htmlFor="checkerPassword" style={{color:'white'}}>Repeat Password</label>
               <input
                 id="checkerPassword"
                 value={checkerPassword}

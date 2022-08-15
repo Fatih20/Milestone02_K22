@@ -33,8 +33,8 @@ const Home: NextPage = () => {
     return (
       <BaseLayout>
         <Container>
-          <h2 style={{fontSize:'48px', marginBottom:'0px'}}>Insomnia?</h2>
-          <h3 style={{marginTop:'0px'}}>We can help with that</h3>
+          <h2 style={{font:'Averia Serif Libre', fontSize:'48px', marginBottom:'0px'}}>Insomnia?</h2>
+          <h3 style={{font:'Averia Serif Libre', marginTop:'0px'}}>We can help with that</h3>
           <a href={"/login"} style={{background: 'yellow', borderRadius:'16px', height:'100%', width:'100%', textAlign:'center'}}>Join Now</a>
         </Container>
       </BaseLayout>
