@@ -16,15 +16,15 @@
 |Nabilah Amanda Putri|16521511| |
 |Aniqa Fayyaza Akbar|16521519| |
 
-Judul Solusi : Final Solution to The Sleep Question
-Nomor Kelompok : 22
-Nama Kelompok : Healthy Sleep Enjoyer
+Judul Solusi : Final Solution to The Sleep Question  
+Nomor Kelompok Milestone : 22  
+Nama Kelompok : Healthy Sleep Enjoyer  
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Project ini dibuat dengan [Next.js](https://nextjs.org/) bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Memulai Aplikasi
 
-First, run the development server:
+Pertama, mulai server pengembangan:
 
 ```bash
 npm run dev
@@ -32,25 +32,27 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk melihat aplikasi ini. 
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Dokumentasi Web
+1. Tampilan Awal WebApp Unsomnia
+  
+![image](https://user-images.githubusercontent.com/92136335/184679895-b1f16023-d218-4144-bfee-530073202371.png)
+  
+2. Halaman Log In Unsomnia
+  
+![image](https://user-images.githubusercontent.com/92136335/184681064-7392fe9e-f8e0-440e-8ca5-622ca394fa40.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+3. Halaman Register 
+  
+![image](https://user-images.githubusercontent.com/92136335/184681463-09a24a3f-bae4-46a9-8d73-36660da9dd70.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Halaman Utama
+  
+![image](https://user-images.githubusercontent.com/92136335/184681649-364d139f-1a8f-4475-a942-654f56a29da0.png)
 
-## Learn More
+## Saran Pengembangan
+1. Peningkatan User Interface agar lebih mudah dan intuitif digunakan
+2. Pemakaian DNS yang lebih mudah diingat
+3. Penambahan fitur yang sekiranya perlu dalam meningkatkan kualitas tidur
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
