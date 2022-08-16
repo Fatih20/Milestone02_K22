@@ -13,7 +13,7 @@
 |Noel Christoffel Simbolon|16521355|Memperjelas langkah-langkah untuk menjalankan *webapp* pada README, *Overall* README *improvements*|
 |Timothy Subekti|16521418| |
 |Laila Bilbina Khoiru Nisa|16521508| |
-|Nabilah Amanda Putri|16521511| ganti text-color untuk alarm form, memberi style pada tombol submit, dan merubah ukuran font.|
+|Nabilah Amanda Putri|16521511| Mengubah text-color untuk alarm form, memberi style pada tombol submit, dan merubah ukuran font.|
 |Aniqa Fayyaza Akbar|16521519| Mengubah warna pada page register dan menuliskan judul, nomor, dan nama kelompok pada readme. |
 
 Judul Solusi : Final Solution to The Sleep Question  
