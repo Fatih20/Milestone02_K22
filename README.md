@@ -5,7 +5,7 @@
 |Antonio Natthan Krishna|16521027|  |
 | Haidar Hamda|16521191| |
 | Danang Ihsan|16521206| Menambah cara kerja pada README.md |
-|Fatih Nararya Rashadyfa I.|16521238| Mengerjakan 95 persen aplikasi. Login, register, logout, alarm, membuat dan menghapus alarm, alarm menyala dan beralih ke game, game bisa dimainkan dan memiliki end screen deaktivasi, dan styling dari 99 persen aplikasinya. |
+|Fatih Nararya Rashadyfa I.|16521238| Mengerjakan 95 persen aplikasi. Login, register, logout, alarm, membuat dan menghapus alarm, alarm menyala dan beralih ke game, game bisa dimainkan dan memiliki end screen deaktivasi, dan styling dari 90 persen aplikasinya. |
 |Muhammad Aliefnaufal|16521319| |
 |Jazmy Izzati Alamsyah|16521324| |
 |Nazhif Haidar Putra Wibowo|16521335| mengubah warna font pada register.tsx dan warna serta ukuran font pada index.tsx (walau gk di-acc)|
