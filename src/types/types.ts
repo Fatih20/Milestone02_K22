@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-export const possibleSymbolList = ["star", "square", "circle", "pentagon"] as const;
+export const possibleSymbolList = ["star", "square", "circle", "shield"] as const;
 export type Symbol = typeof possibleSymbolList[number];
 
 export interface ICard {

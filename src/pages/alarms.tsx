@@ -63,97 +63,97 @@ export default function AlarmPage() {
       setAlarmActive(alarmGoingOff.alarm_id);
     }
   }
-  return (
-    <BaseLayout>
-      <Deactivation hour={9} minute={30} />
-    </BaseLayout>
-  );
-
-  // useEffect(() => {
-  //   if (status === "success" && alarmList) {
-  //     const checkAlarmInterval = setInterval(
-  //       () => alarmChecker(alarmList),
-  //       1000
-  //     );
-  //     return () => clearInterval(checkAlarmInterval);
-  //   }
-  // }, [status, alarmList]);
-
-  // useEffect(() => {
-  //   if (alarmActive !== null) {
-  //     alarmSound.loop = true;
-  //     alarmSound.play();
-  //     return () => alarmSound.pause();
-  //   } else {
-  //     alarmSound.pause();
-  //   }
-  // }, [alarmActive, alarmSound]);
-
-  // const { mutateAsync: addAlarmAndMutate } = useMutation(addAlarm, {
-  //   onSuccess: () => {
-  //     queryClient.invalidateQueries(["myAlarms"]);
-  //   },
-  // });
-
-  // const { mutateAsync: deleteAlarmAndMutate } = useMutation(deleteAlarm, {
-  //   onSuccess: () => {
-  //     queryClient.invalidateQueries(["myAlarms"]);
-  //   },
-  // });
-
-  // if (status === "loading") {
-  //   return (
-  //     <BaseLayout>
-  //       <LoadingRotation />
-  //     </BaseLayout>
-  //   );
-  // }
-
-  // if (status === "error") {
-  //   console.log(error);
-  // }
-
-  // if (alarmActive && alarmList) {
-  //   const activeAlarm = alarmList.find(
-  //     ({ alarm_id }) => alarm_id === alarmActive
-  //   );
-  //   return (
-  //     <BaseLayout>
-  //       <GamePage
-  //         hour={activeAlarm?.Hour}
-  //         minute={activeAlarm?.Minute}
-  //         alarm_id={alarmActive}
-  //         runOnDone={() => {
-  //           alarmSound.pause();
-  //           setTimeout(() => setAlarmActive(null), 1000);
-  //         }}
-  //         urgency={
-  //           alarmList.find(({ alarm_id }) => alarm_id === alarmActive)
-  //             ?.Difficulty ?? "low"
-  //         }
-  //       />
-  //     </BaseLayout>
-  //   );
-  // }
-
   // return (
-  //   <BaseLayout showAccount={true}>
-  //     <Main style={{ color: "white" }}>
-  //       <AlarmList>
-  //         {(alarmList ?? []).map((alarm) => (
-  //           <AlarmComponent
-  //             key={JSON.stringify(alarm)}
-  //             alarm={alarm}
-  //             functionToDelete={async () =>
-  //               deleteAlarmAndMutate(alarm.alarm_id)
-  //             }
-  //           />
-  //         ))}
-  //       </AlarmList>
-  //       <AlarmList>
-  //         <AlarmForm functionToAdd={addAlarmAndMutate} />
-  //       </AlarmList>
-  //     </Main>
+  //   <BaseLayout>
+  //     <Deactivation hour={9} minute={30} />
   //   </BaseLayout>
   // );
+
+  useEffect(() => {
+    if (status === "success" && alarmList) {
+      const checkAlarmInterval = setInterval(
+        () => alarmChecker(alarmList),
+        1000
+      );
+      return () => clearInterval(checkAlarmInterval);
+    }
+  }, [status, alarmList]);
+
+  useEffect(() => {
+    if (alarmActive !== null) {
+      alarmSound.loop = true;
+      alarmSound.play();
+      return () => alarmSound.pause();
+    } else {
+      alarmSound.pause();
+    }
+  }, [alarmActive, alarmSound]);
+
+  const { mutateAsync: addAlarmAndMutate } = useMutation(addAlarm, {
+    onSuccess: () => {
+      queryClient.invalidateQueries(["myAlarms"]);
+    },
+  });
+
+  const { mutateAsync: deleteAlarmAndMutate } = useMutation(deleteAlarm, {
+    onSuccess: () => {
+      queryClient.invalidateQueries(["myAlarms"]);
+    },
+  });
+
+  if (status === "loading") {
+    return (
+      <BaseLayout>
+        <LoadingRotation />
+      </BaseLayout>
+    );
+  }
+
+  if (status === "error") {
+    console.log(error);
+  }
+
+  if (alarmActive && alarmList) {
+    const activeAlarm = alarmList.find(
+      ({ alarm_id }) => alarm_id === alarmActive
+    );
+    return (
+      <BaseLayout>
+        <GamePage
+          hour={activeAlarm?.Hour}
+          minute={activeAlarm?.Minute}
+          alarm_id={alarmActive}
+          runOnDone={() => {
+            alarmSound.pause();
+            setTimeout(() => setAlarmActive(null), 1000);
+          }}
+          urgency={
+            alarmList.find(({ alarm_id }) => alarm_id === alarmActive)
+              ?.Difficulty ?? "low"
+          }
+        />
+      </BaseLayout>
+    );
+  }
+
+  return (
+    <BaseLayout showAccount={true}>
+      <Main style={{ color: "white" }}>
+        <AlarmList>
+          {(alarmList ?? []).map((alarm) => (
+            <AlarmComponent
+              key={JSON.stringify(alarm)}
+              alarm={alarm}
+              functionToDelete={async () =>
+                deleteAlarmAndMutate(alarm.alarm_id)
+              }
+            />
+          ))}
+        </AlarmList>
+        <AlarmList>
+          <AlarmForm functionToAdd={addAlarmAndMutate} />
+        </AlarmList>
+      </Main>
+    </BaseLayout>
+  );
 }
