@@ -35,6 +35,7 @@ export default function AlarmPage() {
   const queryClient = useQueryClient();
   const router = useRouter();
   const [alarmActive, setAlarmActive] = useState(null as null | number);
+  const [alarmSound, setAlarmSound] = useState(new Audio("/alarmSound.mp3"));
 
   const {
     data: alarmList,
@@ -72,13 +73,14 @@ export default function AlarmPage() {
   }, [status, alarmList]);
 
   useEffect(() => {
-    if (alarmActive === null) {
-      const alarmSound = new Audio("/alarmSound.mp3");
+    if (alarmActive !== null) {
       alarmSound.loop = true;
       alarmSound.play();
       return () => alarmSound.pause();
+    } else {
+      alarmSound.pause();
     }
-  }, [alarmActive]);
+  }, [alarmActive, alarmSound]);
 
   const { mutateAsync: addAlarmAndMutate } = useMutation(addAlarm, {
     onSuccess: () => {
