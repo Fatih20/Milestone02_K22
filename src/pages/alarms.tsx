@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import AlarmComponent from "../components/elements/alarm";
 import AlarmForm from "../components/elements/alarmForm";
@@ -8,7 +8,7 @@ import Deactivation from "../components/elements/deactivation";
 import GamePage from "../components/elements/game";
 import LoadingRotation from "../components/elements/loading";
 import BaseLayout from "../components/layout/base";
-import { Alarm } from "../types/types";
+import { Alarm, TimeWhitelist } from "../types/types";
 import { addAlarm, deleteAlarm, getMyAlarm } from "../utils/api";
 
 const Main = styled.div`
@@ -38,6 +38,10 @@ export default function AlarmPage() {
   const router = useRouter();
   const [alarmActive, setAlarmActive] = useState(null as null | number);
   const [alarmSound, setAlarmSound] = useState(new Audio("/alarmSound.mp3"));
+  const temporarilyWhitelisted = useRef({
+    hour: null,
+    minute: null,
+  } as TimeWhitelist);
 
   const {
     data: alarmList,
@@ -47,19 +51,27 @@ export default function AlarmPage() {
     retry: 1,
   });
 
-  function alarmChecker(alarmList: Alarm[]) {
+  function alarmChecker(
+    alarmList: Alarm[],
+    { hour: hourWhitelist, minute: minuteWhitelist }: TimeWhitelist
+  ) {
     if (!alarmList) {
       return;
     }
     const time = new Date();
     const hourNow = time.getHours();
     const minuteNow = time.getMinutes();
+
+    if (hourNow === hourWhitelist && minuteNow === minuteWhitelist) {
+      return;
+    }
     // console.log(alarmList);
     const alarmGoingOff = alarmList.find(
       ({ Hour, Minute }) => Hour === hourNow && Minute === minuteNow
     );
 
     if (alarmGoingOff) {
+      temporarilyWhitelisted.current = { hour: hourNow, minute: minuteNow };
       setAlarmActive(alarmGoingOff.alarm_id);
     }
   }
@@ -72,7 +84,7 @@ export default function AlarmPage() {
   useEffect(() => {
     if (status === "success" && alarmList) {
       const checkAlarmInterval = setInterval(
-        () => alarmChecker(alarmList),
+        () => alarmChecker(alarmList, temporarilyWhitelisted.current),
         1000
       );
       return () => clearInterval(checkAlarmInterval);

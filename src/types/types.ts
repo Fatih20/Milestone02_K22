@@ -49,6 +49,11 @@ export interface NextApiResponseWithLocals extends NextApiResponse {
   locals : any
 }
 
-export type TokenStatus  = "none" | "invalid" | "valid"
+export type TokenStatus  = "none" | "invalid" | "valid";
+
+export type TimeWhitelist = {
+  hour : number | null,
+  minute : number | null
+}
 
 
