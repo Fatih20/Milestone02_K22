@@ -37,7 +37,8 @@ export default function AlarmPage() {
   const queryClient = useQueryClient();
   const router = useRouter();
   const [alarmActive, setAlarmActive] = useState(null as null | number);
-  const [alarmSound, setAlarmSound] = useState(new Audio("/alarmSound.mp3"));
+  const [hydrated, setHydrated] = useState(false);
+  const [alarmSound, setAlarmSound] = useState(null as any);
   const temporarilyWhitelisted = useRef({
     hour: null,
     minute: null,
@@ -78,23 +79,32 @@ export default function AlarmPage() {
       setAlarmActive(alarmGoingOff.alarm_id);
     }
   }
-  // return (
-  //   <BaseLayout>
-  //     <Deactivation hour={9} minute={30} />
-  //   </BaseLayout>
-  // );
 
   useEffect(() => {
-    if (status === "success" && alarmList) {
+    setHydrated(true);
+    setAlarmSound(new Audio("/alarmSound.mp3"));
+  }, []);
+
+  // useEffect(() => {
+  //   if (hydrated) {
+  //     setAlarmSound(new Audio("/alarmSound.mp3"));
+  //   }
+  // }, [hydrated]);
+
+  useEffect(() => {
+    if (status === "success" && alarmList && hydrated) {
       const checkAlarmInterval = setInterval(
         () => alarmChecker(alarmList, temporarilyWhitelisted.current),
         1000
       );
       return () => clearInterval(checkAlarmInterval);
     }
-  }, [status, alarmList]);
+  }, [status, alarmList, hydrated]);
 
   useEffect(() => {
+    if (!hydrated) {
+      return;
+    }
     if (alarmActive !== null) {
       alarmSound.loop = true;
       alarmSound.play();
@@ -102,7 +112,7 @@ export default function AlarmPage() {
     } else {
       alarmSound.pause();
     }
-  }, [alarmActive, alarmSound]);
+  }, [alarmActive, alarmSound, hydrated]);
 
   const { mutateAsync: addAlarmAndMutate } = useMutation(addAlarm, {
     onSuccess: () => {
