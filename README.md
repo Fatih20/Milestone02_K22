@@ -8,7 +8,7 @@
 |Fatih Nararya Rashadyfa I.|16521238| Mengerjakan 95 persen aplikasi. Login, register, logout, alarm, membuat dan menghapus alarm, alarm menyala dan beralih ke game, game bisa dimainkan dan memiliki end screen deaktivasi, dan styling dari 90 persen aplikasinya. |
 |Muhammad Aliefnaufal|16521319| Menambah saran pengembangan | 
 |Jazmy Izzati Alamsyah|16521324| Menyensor password pada login.tsx dan register.tsx serta menambahkan tabel nama, NIM, dan pembagian tugas pada README.md.|
-|Nazhif Haidar Putra Wibowo|16521335| mengubah warna font pada register.tsx dan warna serta ukuran font pada index.tsx (walau gk di-acc)|
+|Nazhif Haidar Putra Wibowo|16521335| mengubah warna font pada register.tsx dan warna serta ukuran font pada index.tsx|
 |Jeffrey Chow|16521353| Mengupdate styling pada page home, login, register, dan header agar sesuai dengan design Figma |
 |Noel Christoffel Simbolon|16521355|Memperjelas langkah-langkah untuk menjalankan *webapp* pada README, *Overall* README *improvements*|
 |Timothy Subekti|16521418| |
