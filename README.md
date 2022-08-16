@@ -9,7 +9,7 @@
 |Muhammad Aliefnaufal|16521319| |
 |Jazmy Izzati Alamsyah|16521324| |
 |Nazhif Haidar Putra Wibowo|16521335| |
-|Jeffrey Chow|16521353| |
+|Jeffrey Chow|16521353| Melakukan styling pada page Home, Login, Register, dan Header agar sesuai dengan design di Figma|
 |Noel Christoffel Simbolon|16521355| |
 |Timothy Subekti|16521418| |
 |Laila Bilbina Khoiru Nisa|16521508| |
