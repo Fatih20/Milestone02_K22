@@ -10,7 +10,7 @@
 |Jazmy Izzati Alamsyah|16521324| |
 |Nazhif Haidar Putra Wibowo|16521335| |
 |Jeffrey Chow|16521353| |
-|Noel Christoffel Simbolon|16521355| |
+|Noel Christoffel Simbolon|16521355|Memperjelas langkah-langkah untuk menjalankan *webapp* pada README|
 |Timothy Subekti|16521418| |
 |Laila Bilbina Khoiru Nisa|16521508| |
 |Nabilah Amanda Putri|16521511| |
