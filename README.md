@@ -14,7 +14,7 @@
 |Timothy Subekti|16521418| |
 |Laila Bilbina Khoiru Nisa|16521508| |
 |Nabilah Amanda Putri|16521511| |
-|Aniqa Fayyaza Akbar|16521519| |
+|Aniqa Fayyaza Akbar|16521519| Mengubah warna pada page register dan menuliskan judul, nomor, dan nama kelompok pada readme. |
 
 Judul Solusi : Final Solution to The Sleep Question  
 Nomor Kelompok Milestone : 22  
