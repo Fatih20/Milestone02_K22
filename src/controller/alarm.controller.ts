@@ -18,6 +18,18 @@ export async function createAlarm (req : NextApiRequest, res : NextApiResponseWi
     const {user_id} = res.locals.user as UserOpaque
     const {Title, Description, Difficulty, Hour, Minute} = req.body;
 
+    const existingAlarm = await prisma.alarm.findFirst({
+        where : {
+         owner_id : user_id,
+         Hour,
+         Minute
+        }
+     })
+
+     if (existingAlarm) {
+        return res.status(400).send({message : "Alarm already exists"})
+     }
+
     const createdAlarm = await prisma.alarm.create({
         data : {
             owner_id : user_id,
