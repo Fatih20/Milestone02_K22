@@ -10,7 +10,7 @@
 |Jazmy Izzati Alamsyah|16521324| |
 |Nazhif Haidar Putra Wibowo|16521335| |
 |Jeffrey Chow|16521353| |
-|Noel Christoffel Simbolon|16521355|Memperjelas langkah-langkah untuk menjalankan *webapp* pada README|
+|Noel Christoffel Simbolon|16521355|Memperjelas langkah-langkah untuk menjalankan *webapp* pada README, *Overall* README *improvements*|
 |Timothy Subekti|16521418| |
 |Laila Bilbina Khoiru Nisa|16521508| |
 |Nabilah Amanda Putri|16521511| |
@@ -50,7 +50,7 @@ npm run dev
 
 Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk melihat aplikasi ini. 
 
-## Dokumentasi Web
+<!-- ## Dokumentasi Web
 1. Tampilan Awal WebApp Unsomnia
   
 ![image](https://user-images.githubusercontent.com/92136335/184679895-b1f16023-d218-4144-bfee-530073202371.png)
@@ -65,10 +65,10 @@ Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk me
 
 4. Halaman Utama
   
-![image](https://user-images.githubusercontent.com/92136335/184681649-364d139f-1a8f-4475-a942-654f56a29da0.png)
+![image](https://user-images.githubusercontent.com/92136335/184681649-364d139f-1a8f-4475-a942-654f56a29da0.png) -->
 
 ## Cara Kerja
-1. Buka Webside [Unsomnia](https://unsomnia.herokuapp.com).
+1. Buka website [Unsomnia](http://unsomnia.vercel.app/).
 
 ![image](https://user-images.githubusercontent.com/89301221/184844218-4d4599e9-e4ae-47b8-b1b8-de9a34806607.jpg)
 
