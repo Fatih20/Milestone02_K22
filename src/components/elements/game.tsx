@@ -9,11 +9,14 @@ import {
 } from "../../types/types";
 import { checkIfSameShape, shuffleArray } from "../../utils/utilities";
 import configUX from "../../config/configUX";
+import Deactivation from "./deactivation";
 
 type GameProps = {
   alarm_id: number;
   urgency: Urgency;
   runOnDone: () => void;
+  hour: number | undefined;
+  minute: number | undefined;
 };
 
 const Main = styled.div`
@@ -69,7 +72,13 @@ function cardArrayGenerator() {
   });
 }
 
-export default function GamePage({ alarm_id, runOnDone, urgency }: GameProps) {
+export default function GamePage({
+  alarm_id,
+  runOnDone,
+  urgency,
+  hour,
+  minute,
+}: GameProps) {
   const [hydrated, setHydrated] = useState(false);
   const [remainingRound, setRemainingRound] = useState(
     configUX.urgencyToRound[urgency]
@@ -103,12 +112,14 @@ export default function GamePage({ alarm_id, runOnDone, urgency }: GameProps) {
   }, [openedCard]);
 
   useEffect(() => {
-    if (hiddenCard.current.length === 16) {
-      if (remainingRound > 1) {
+    if (remainingRound > 0) {
+      if (hiddenCard.current.length === 16) {
         setRemainingRound((prevRemainingRound) => prevRemainingRound - 1);
-        reset();
-      } else {
-        runOnDone();
+        if (remainingRound > 1) {
+          reset();
+        } else {
+          runOnDone();
+        }
       }
     }
   }, [hiddenCard.current, remainingRound, runOnDone]);
@@ -121,6 +132,14 @@ export default function GamePage({ alarm_id, runOnDone, urgency }: GameProps) {
 
   if (!hydrated) {
     return null;
+  }
+
+  if (remainingRound === 0) {
+    return (
+      <Main>
+        <Deactivation hour={hour} minute={minute} />
+      </Main>
+    );
   }
 
   return (
