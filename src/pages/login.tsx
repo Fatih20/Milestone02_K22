@@ -63,6 +63,7 @@ export const InputText = styled.input`
   background: none;
   border: solid 1px white;
   border-radius: 2em;
+  color: white;
 `;
 
 export const SubmitButton = styled.button`
