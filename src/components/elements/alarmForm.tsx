@@ -51,13 +51,21 @@ const Spacer = styled.div`
 export default function AlarmForm({
   functionToAdd,
 }: {
-  functionToAdd: (arg1: Alarm) => void;
+  functionToAdd: (arg1: Alarm) => Promise<void>;
 }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [urgency, setUrgency] = useState("low" as Urgency);
   const [hour, setHour] = useState("");
   const [minute, setMinute] = useState("");
+
+  function reset() {
+    setTitle("");
+    setDescription("");
+    setUrgency("low" as Urgency);
+    setHour("");
+    setMinute("");
+  }
 
   useEffect(() => {
     if (parseInt(hour) >= 24 || parseInt(hour) < 0) {
@@ -71,7 +79,7 @@ export default function AlarmForm({
     }
   }, [minute]);
 
-  function handleSubmit(e: FormEvent) {
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
     const createdAlarm = {
       Title: title,
@@ -81,7 +89,8 @@ export default function AlarmForm({
       Difficulty: urgency,
     } as Alarm;
 
-    functionToAdd(createdAlarm);
+    await functionToAdd(createdAlarm);
+    reset();
   }
 
   return (
