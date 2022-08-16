@@ -24,12 +24,28 @@ Project ini dibuat dengan [Next.js](https://nextjs.org/) bootstrapped with [`cre
 
 ## Memulai Aplikasi
 
-Pertama, mulai server pengembangan:
+Pertama, lakukan *cloning* pada *repository* ini ke *local repository* komputer Anda.
+
+```bash
+git clone https://github.com/Fatih20/Milestone02_K22
+```
+
+Buka *directory* tersebut lalu *change directory* ke `/src`
+
+```bash
+cd src/
+```
+
+Dari *directory* tersebut, lakukan instalasi semua *dependecy* yang diperlukan dalam proyek ini.
+
+```bash
+npm i
+```
+
+Lalu, mulai server pengembangan:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk melihat aplikasi ini. 
@@ -52,7 +68,7 @@ Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk me
 ![image](https://user-images.githubusercontent.com/92136335/184681649-364d139f-1a8f-4475-a942-654f56a29da0.png)
 
 ## Saran Pengembangan
-1. Peningkatan User Interface agar lebih mudah dan intuitif digunakan
-2. Pemakaian DNS yang lebih mudah diingat
+1. Peningkatan *User Interface* agar lebih mudah dan intuitif digunakan
+2. Pemakaian *domain* yang lebih mudah diingat
 3. Penambahan fitur yang sekiranya perlu dalam meningkatkan kualitas tidur
 
