@@ -17,6 +17,7 @@ const ChildrenContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
+  width: 100%;
 `;
 
 export default function BaseLayout({

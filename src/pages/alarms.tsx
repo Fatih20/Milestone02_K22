@@ -1,7 +1,10 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import AlarmComponent from "../components/elements/alarm";
 import AlarmForm from "../components/elements/alarmForm";
+import GamePage from "../components/elements/game";
 import LoadingRotation from "../components/elements/loading";
 import BaseLayout from "../components/layout/base";
 import { Alarm } from "../types/types";
@@ -30,6 +33,9 @@ const AlarmList = styled.div`
 
 export default function AlarmPage() {
   const queryClient = useQueryClient();
+  const router = useRouter();
+  const [alarmActive, setAlarmActive] = useState(null as null | number);
+
   const {
     data: alarmList,
     status,
@@ -37,6 +43,42 @@ export default function AlarmPage() {
   } = useQuery<Alarm[] | undefined>(["myAlarms"], getMyAlarm, {
     retry: 1,
   });
+
+  function alarmChecker(alarmList: Alarm[]) {
+    if (!alarmList) {
+      return;
+    }
+    const time = new Date();
+    const hourNow = time.getHours();
+    const minuteNow = time.getMinutes();
+    // console.log(alarmList);
+    const alarmGoingOff = alarmList.find(
+      ({ Hour, Minute }) => Hour === hourNow && Minute === minuteNow
+    );
+
+    if (alarmGoingOff) {
+      setAlarmActive(alarmGoingOff.alarm_id);
+    }
+  }
+
+  useEffect(() => {
+    if (status === "success" && alarmList) {
+      const checkAlarmInterval = setInterval(
+        () => alarmChecker(alarmList),
+        500
+      );
+      return () => clearInterval(checkAlarmInterval);
+    }
+  }, [status, alarmList]);
+
+  useEffect(() => {
+    if (alarmActive === null) {
+      const alarmSound = new Audio("/alarmSound.mp3");
+      alarmSound.loop = true;
+      alarmSound.play();
+      return () => alarmSound.pause();
+    }
+  }, [alarmActive]);
 
   const { mutateAsync: addAlarmAndMutate } = useMutation(addAlarm, {
     onSuccess: () => {
@@ -60,6 +102,21 @@ export default function AlarmPage() {
 
   if (status === "error") {
     console.log(error);
+  }
+
+  if (alarmActive && alarmList) {
+    return (
+      <BaseLayout>
+        <GamePage
+          alarm_id={alarmActive}
+          runOnDone={() => setAlarmActive(null)}
+          urgency={
+            alarmList.find(({ alarm_id }) => alarm_id === alarmActive)
+              ?.Difficulty ?? "low"
+          }
+        />
+      </BaseLayout>
+    );
   }
 
   return (

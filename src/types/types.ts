@@ -50,3 +50,5 @@ export interface NextApiResponseWithLocals extends NextApiResponse {
 }
 
 export type TokenStatus  = "none" | "invalid" | "valid"
+
+
