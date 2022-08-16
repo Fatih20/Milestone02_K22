@@ -44,6 +44,10 @@ const Dropdown = styled.div<IDropdown>`
   pointer-events: none;
 `;
 
+const LogoutText = styled.p`
+  pointer-events: auto;
+`;
+
 const ButtonContainer = styled.div`
   align-items: end;
   background-color: white;
@@ -80,7 +84,7 @@ function AccountButton() {
       </ButtonStyled>
       <Dropdown show={showDropdown}>
         <ButtonContainer>
-          <p onClick={() => logoutAndMutate()}>Logout</p>
+          <LogoutText onClick={() => logoutAndMutate()}>Logout</LogoutText>
         </ButtonContainer>
       </Dropdown>
     </DropdownContainer>

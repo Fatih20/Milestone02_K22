@@ -49,6 +49,9 @@ export default function AlarmPage() {
     error,
   } = useQuery<Alarm[] | undefined>(["myAlarms"], getMyAlarm, {
     retry: 1,
+    onError: () => {
+      router.push("/login");
+    },
   });
 
   function alarmChecker(
