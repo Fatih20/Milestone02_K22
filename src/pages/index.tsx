@@ -19,17 +19,26 @@ const Container = styled.div`
 `;
 
 const MainTitle = styled.h2`
-  font-size: 3rem;
+  font-size: 6rem;
+  font-weight: 900;
 `;
 
-const SubTitle = styled.h3``;
+const SubTitle = styled.h3`
+  font-weight: 600;
+  font-size : 2.5rem;
+  margin-top : -2rem;
+  margin-bottom : 3rem;
+`;
 
 const Button = styled.button`
   background-color: #ffe16b;
   border-radius: 1rem;
   padding: 0.5em;
   text-align: center;
-  width: 100%;
+  width: 20%;
+  font-weight: 800;
+  font-size: 1.2rem;
+
 `;
 
 const Home: NextPage = () => {

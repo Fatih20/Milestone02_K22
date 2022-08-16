@@ -21,6 +21,8 @@ const Main = styled.div`
 
 const Heading = styled.h1`
   /* border: solid 1px white; */
+  font-weight: 900;
+  padding-left: 1.2rem;
 `;
 
 const Spacer = styled.div`
