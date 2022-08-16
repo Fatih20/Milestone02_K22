@@ -3,7 +3,7 @@
 | Nama | NIM | Pembagian Tugas |
 | ------ | ----| ---- |
 |Antonio Natthan Krishna|16521027|Memulai template Saran Pengembangan dan dokumentasi (beserta isinya sebelum diperbaiki) pada README|
-| Haidar Hamda|16521191| |
+| Haidar Hamda|16521191| styling pada page index (tombol join, ubah text-color) dan login (tombol login, text-color)|
 | Danang Ihsan|16521206| Menambah cara kerja pada README.md |
 |Fatih Nararya Rashadyfa I.|16521238| Mengerjakan 95 persen aplikasi. Login, register, logout, alarm, membuat dan menghapus alarm, alarm menyala dan beralih ke game, game bisa dimainkan dan memiliki end screen deaktivasi, dan styling dari 90 persen aplikasinya. |
 |Muhammad Aliefnaufal|16521319| Menambah saran pengembangan | 
