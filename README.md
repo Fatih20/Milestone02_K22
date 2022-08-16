@@ -9,7 +9,7 @@
 |Muhammad Aliefnaufal|16521319| |
 |Jazmy Izzati Alamsyah|16521324| |
 |Nazhif Haidar Putra Wibowo|16521335| mengubah warna font pada register.tsx dan warna serta ukuran font pada index.tsx (walau gk di-acc)|
-|Jeffrey Chow|16521353| |
+|Jeffrey Chow|16521353| Mengupdate styling pada page home, login, register, dan header agar sesuai dengan design Figma |
 |Noel Christoffel Simbolon|16521355|Memperjelas langkah-langkah untuk menjalankan *webapp* pada README, *Overall* README *improvements*|
 |Timothy Subekti|16521418| |
 |Laila Bilbina Khoiru Nisa|16521508| |

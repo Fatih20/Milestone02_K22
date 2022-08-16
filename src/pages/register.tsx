@@ -1,4 +1,4 @@
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { FormEvent, useState } from "react";
@@ -12,7 +12,10 @@ import {
   InputText,
   Main,
   SubmitButton,
+  Title
 } from "./login";
+
+
 
 export default function Register() {
   const queryClient = useQueryClient();
@@ -48,8 +51,9 @@ export default function Register() {
   return (
     <BaseLayout>
       <Main>
-        <FontAwesomeIcon icon={faUser} size='2x' />
+        <FontAwesomeIcon icon={faCircleUser} size='4x' />
         <FormContainer>
+          <Title>Sign Up Account</Title>
           <FormStyled onSubmit={(e) => handleRegister(e)}>
             <InputContainer>
               <label htmlFor='username' style={{ color: "white" }}>
@@ -95,7 +99,7 @@ export default function Register() {
             </InputContainer>
             <SubmitButton type='submit'>Register</SubmitButton>
           </FormStyled>
-          <p style={{ color: "white" }}>
+          <p style={{ color: "white", fontSize: "0.6rem" }}>
             Already have an account?{" "}
             <a
               href='./login'

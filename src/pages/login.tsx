@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { FormEvent, useState } from "react";
 import styled from "styled-components";
 import BaseLayout from "../components/layout/base";
@@ -13,17 +13,28 @@ export const Main = styled.div`
   flex-direction: column;
   gap: 1em;
   justify-content: center;
+  color: #ffe16b;
+`;
+
+export const Title = styled.div`
+  font-weight: 700;
+  font-size: 0.95rem;
 `;
 
 export const FormContainer = styled.div`
   align-items: center;
-  border: solid 2px #ffe16b;
-  border-radius: 0.25em;
+  border: solid 4px #ffe16b;
+  border-radius: 1.5em;
   display: flex;
   flex-direction: column;
   gap: 1em;
   justify-content: center;
   padding: 0.5em;
+  padding-top: 3em;
+  color: white;
+  margin-top: -2.78em;
+
+
 `;
 
 export const FormStyled = styled.form`
@@ -31,6 +42,8 @@ export const FormStyled = styled.form`
   flex-direction: column;
   gap: 0.5em;
   width: 100%;
+  padding: 1rem;
+
 `;
 
 export const InputContainer = styled.div`
@@ -40,19 +53,26 @@ export const InputContainer = styled.div`
   gap: 0.25em;
   justify-content: center;
   width: 100%;
+  font-weight: 500;
+  font-size: 0.75em;
 `;
 
 export const InputText = styled.input`
-  outline: none;
   padding: 0.25em;
   width: 100%;
+  background: none;
+  border: solid 1px white;
+  border-radius: 2em;
 `;
 
 export const SubmitButton = styled.button`
-  border-radius: 0.5em;
+  border-radius: 1em;
   background-color: #ffe16b;
   padding: 0.25em 0;
   font-size: 1em;
+  margin-top: 2em;
+  font-weight: 900
+
 `;
 
 export const Spacer = styled.div`
@@ -89,11 +109,12 @@ export default function Login() {
   return (
     <BaseLayout>
       <Main>
-        <FontAwesomeIcon icon={faUser} size='2x' />
+        <FontAwesomeIcon icon={faCircleUser} size='4x' />
         <FormContainer>
+          <Title>Login to Your Account</Title>
           <FormStyled onSubmit={(e) => handleLogin(e)}>
             <InputContainer>
-              <label htmlFor='username' style={{ color: "white" }}>
+              <label htmlFor='username' style={{ color: "white"}}>
                 Username
               </label>
               <InputText
@@ -116,9 +137,9 @@ export default function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </InputContainer>
-            <SubmitButton type='submit'>Log In</SubmitButton>
+            <SubmitButton type='submit'>Sign In</SubmitButton>
           </FormStyled>
-          <p style={{ color: "white" }}>
+          <p style={{ color: "white", fontSize: "0.6rem" }}>
             Don&apos;t have an account yet?{" "}
             <a
               href='./register'
