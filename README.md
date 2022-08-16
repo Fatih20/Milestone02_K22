@@ -107,7 +107,7 @@ Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk me
 ![image](https://user-images.githubusercontent.com/89301221/184844526-eeb5cb54-79a3-4683-845d-b536288e342d.jpg)
 
 ## Saran Pengembangan
-1. Peningkatan *User Interface* agar lebih mudah dan intuitif digunakan
+1. Peningkatan *User Interface* agar lebih mudah dan intuitif digunakan serta sesuai dengan mockup
 2. Pemakaian *domain* yang lebih mudah diingat
-3. Penambahan fitur yang sekiranya perlu dalam meningkatkan kualitas tidur
+3. Penambahan fitur yang sekiranya perlu dalam meningkatkan efektivitas penjadwalan sehingga dapat meningkatkan kualitas tidur
 
