@@ -5,7 +5,7 @@
 |Antonio Natthan Krishna|16521027|  |
 | Haidar Hamda|16521191| |
 | Danang Ihsan|16521206| Menambah cara kerja pada README.md |
-|Fatih Nararya Rashadyfa I.|16521238| |
+|Fatih Nararya Rashadyfa I.|16521238| Mengerjakan 95 persen aplikasi. Login, register, logout, alarm, membuat dan menghapus alarm, alarm menyala dan beralih ke game, game bisa dimainkan dan memiliki end screen deaktivasi, dan styling dari 99 persen aplikasinya. |
 |Muhammad Aliefnaufal|16521319| |
 |Jazmy Izzati Alamsyah|16521324| |
 |Nazhif Haidar Putra Wibowo|16521335| |
