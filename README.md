@@ -4,7 +4,7 @@
 | ------ | ----| ---- |
 |Antonio Natthan Krishna|16521027|  |
 | Haidar Hamda|16521191| |
-| Danang Ihsan|16521206| |
+| Danang Ihsan|16521206| Menambah cara kerja pada README.md |
 |Fatih Nararya Rashadyfa I.|16521238| |
 |Muhammad Aliefnaufal|16521319| |
 |Jazmy Izzati Alamsyah|16521324| |
@@ -64,7 +64,7 @@ Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk me
 
 4. Isi __Username__, __Email__, __Password__, dan __Repeat Password__ lalu klik __Registrasi__.
 
-![image](https://user-images.githubusercontent.com/89301221/184844358-a666235e-0cb7-4f31-9a84-82c2b9668d10.jpg)
+![image](https://user-images.githubusercontent.com/89301221/184844659-5f92bc2a-f668-4fb5-92f0-2eaad1bcd1f6.jpg)
 
 5. Setelah itu, akan muncul pilihan untuk membuat alarm. Isilah __Title__, __Description__, __Urgency__, __Hour__, dan __Minute__. Pada bagian __Urgency__, terdapat pilihan Low, Med, dan High, pilihan tersebut untuk menentukan seberapa penting alarm tersebut dan banyaknya puzzle yang harus diselesaikan. Untuk Low = 1 Puzzle, Mid = 2 Puzzle, dan High = 3 Puzzle.
 
@@ -72,7 +72,7 @@ Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk me
 
 6. Setelah alarm dibuat, akan muncul daftar alarm dibagian _kiri_ dari bagian pembuatan alarm.
 
-![image](https://user-images.githubusercontent.com/89301221/184844526-eeb5cb54-79a3-4683-845d-b536288e342d.jpg)
+![image](https://user-images.githubusercontent.com/89301221/184844358-a666235e-0cb7-4f31-9a84-82c2b9668d10.jpg)
 
 7. Pada saat waktu menunjukkan jam yang sama dengan salah satu alarm yang dibuat, maka alarm akan berbunyi dan memberikan puzzle. Pada bagian atas puzzle terdapat banyaknya puzzle yang harus diselesaikan sesuai dengan urgensi yang dibuat.
 
@@ -88,7 +88,7 @@ Buka [http://localhost:3000](http://localhost:3000) dengan browser Anda untuk me
 
 10. Untuk _Logout_, User dapat menekan bagian foto profil di bagian pojok kanan atas, lalu klik __Logout__. Setelah logout akan muncul tampilan awal.
 
-![image](https://user-images.githubusercontent.com/89301221/184844659-5f92bc2a-f668-4fb5-92f0-2eaad1bcd1f6.jpg)
+![image](https://user-images.githubusercontent.com/89301221/184844526-eeb5cb54-79a3-4683-845d-b536288e342d.jpg)
 
 ## Saran Pengembangan
 1. Peningkatan User Interface agar lebih mudah dan intuitif digunakan
