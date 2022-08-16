@@ -14,6 +14,7 @@ const Main = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 1em 0;
   gap: 1em;
   justify-content: center;
 
